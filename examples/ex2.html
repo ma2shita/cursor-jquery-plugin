@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
+    <script type="text/javascript" src="../src/jquery.cursor.js"></script>
+    <script type="text/javascript">
+      $(function(){
+	    $('#list').cursor({cursorElement: 'tr', currentClassName: 'cur'}); /* init */
+	    /* bind action for cursor move */
+        shortcut.add('j',function(){$('#list').cursor.next();}); /* vim like */
+        shortcut.add('k',function(){$('#list').cursor.prev();}); /* vim like */
+        shortcut.add('Down',function(){$('#list').cursor.next();});
+        shortcut.add('Up',function(){$('#list').cursor.prev();});
+      });
+	</script>
+    <style type="text/css">
+	  .cur td{background:#ffedab;}
+    </style>
+  </head>
+  <body>
+    <h1>Cursor jQuery Plugin Example</h1>
+    <h2>List</h2>
+	<table id="list">
+	  <tbody>
+	    <tr><td>1st</td><td>Value</td></tr>
+	    <tr><td>2nd</td><td>Value</td></tr>
+	    <tr><td>CLICK ME !!!</td><td>Value</td></tr>
+	    <tr><td>3rd</td><td>Value</td></tr>
+	    <tr><td>4th</td><td>Value</td></tr>
+	  </tbody>
+	</table>
+	<h2>Keyboard</h2>
+	<p>j or Up = UP, k or Down = DOWN</p>
+
+	<div style="margin-top:2em;">
+		<a href="../">Cursor jQuery Plugin HOME</a>
+	</div>
+  </body>
+</html>

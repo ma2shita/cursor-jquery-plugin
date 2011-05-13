@@ -1,0 +1,130 @@
+Cursor jQuery Plugin
+====================
+
+Overview
+--------
+
+GmailやGoogle Readerで見かけるカーソル移動が出来るようになるjQueryプラグイン
+
+キーボードショートカットと組み合わせて使うと、UIの幅が広がります。
+
+Demo
+----
+
+* [Simple](examples/ex1.html)
+* [with Keyboard Shortcut (& init params)](examples/ex2.html)
+
+Environments
+------------
+
+### requirements ###
+
+* jQuery 1.5 or higher
+
+### recommends ###
+
+* [Handling Keyboard Shortcuts in JavaScript](http://www.openjs.com/scripts/events/keyboard_shortcuts/)
+
+Getting Start
+-------------
+
+### overview ###
+
+	$('#list').cursor();
+	$('#list').cursor.next();
+	$('#list').cursor.prev();
+	console.log($('#list').cursor.current());
+
+### Example - Simple ###
+
+	<html>
+	  <head>
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+	    <script type="text/javascript" src=""></script>
+	    <script type="text/javascript">
+	      $(function(){
+	        $('#list').cursor(); /* init */
+		    /* bind action for cursor move */
+		    $('#up').bind('click', function(){$('#list').cursor.prev();});
+		    $('#down').bind('click', function(){$('#list').cursor.next();});
+	      });
+		</script>
+	    <style type="text/css">
+	      .pointed{background:#ffedab;}
+	    </style>
+	  </head>
+	  <body>
+	    <h1>Cursor jQuery Plugin Example</h1>
+	    <h2>List</h2>
+	    <ul id="list">
+	      <li>top</li>
+	      <li>middle</li>
+	      <li>CLICK ME !!!</li>
+	      <li>bottom</li>
+	    </ul>
+	    <div id="up">cursor UP</div>
+	    <div id="down">cursor Down</div>
+	  </body>
+	</html>
+
+### Example - with Keyboard Shortcut (and init params) ###
+
+	<html>
+	  <head>
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+	    <script type="text/javascript" src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
+	    <script type="text/javascript" src=""></script>
+	    <script type="text/javascript">
+	      $(function(){
+	        $('#list').cursor({cursorElement: 'tr', currentClassName: 'cur'}); /* init */
+			/* binding keyboard */
+	        shortcut.add('j',function(){$('#list').cursor.next();}); /* vim like */
+	        shortcut.add('k',function(){$('#list').cursor.prev();}); /* vim like */
+	        shortcut.add('Down',function(){list.cursor.next();});
+	        shortcut.add('Up',function(){list.cursor.prev();});
+	      });
+		</script>
+	    <style type="text/css">
+	      .cur td{background:#ffedab;}
+	    </style>
+	  </head>
+	  <body>
+	    <h1>Cursor jQuery Plugin Example</h1>
+	    <h2>List</h2>
+		<table id="list">
+		  <tbody>
+		    <tr><td>1st</td></tr>
+		    <tr><td>2nd</td></tr>
+		    <tr><td>CLICK ME !!!</td></tr>
+		    <tr><td>3rd</td></tr>
+		    <tr><td>4th</td></tr>
+		  </tbody>
+		</table>
+	  </body>
+	</html>
+
+Reference
+---------
+
+### methods ###
+
+next
+: next
+
+prev
+: prev
+
+current
+: return current
+
+### init settings ###
+
+cursorElement
+: default = tr
+
+currentClassName
+: default = 'pointed'
+
+debug
+: default = false
+
