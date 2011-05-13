@@ -4,12 +4,12 @@ Cursor jQuery Plugin
 Overview
 --------
 
-* en
+* (en)
 
 	"Cursor jQuery Plugin" is a jQuery plugin provides a movable cursor within the HTML elements, like the Gmail and Google Reader cursor.
 	Combined with a keyboard shortcuts,  you'll be able to provide a good UI.
 
-* ja
+* (ja)
 
 	GmailやGoogle Readerで見かけるカーソル移動が出来るようになるjQueryプラグインです。
 	キーボードショートカットと組み合わせて使うと、UIの幅が広がります。
@@ -46,7 +46,7 @@ Getting Start
 	<html>
 	  <head>
 	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-	    <script type="text/javascript" src=""></script>
+	    <script type="text/javascript" src="jquery.cursor.js"></script>
 	    <script type="text/javascript">
 	      $(function(){
 	        $('#list').cursor(); /* init */
@@ -79,7 +79,7 @@ Getting Start
 	  <head>
 	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 	    <script type="text/javascript" src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
-	    <script type="text/javascript" src=""></script>
+	    <script type="text/javascript" src="jquery.cursor.js"></script>
 	    <script type="text/javascript">
 	      $(function(){
 	        $('#list').cursor({cursorElement: 'tr', currentClassName: 'cur'}); /* init */
@@ -117,19 +117,25 @@ Reference
 * cursorElement : String
 
 	default=`'li'`
+
 	(en) N/A
+
 	(ja) cursor()対象の子エレメントのうち、カーソル移動対象となるエレメントを指定します。
 
 * currentClassName : String
 
 	default=`'pointed'`
+
 	(en) N/A
+
 	(ja) フォーカスが当たっているエレメントに付与するクラス名を指定します。
 
 * debug : Boolean
 
 	default=`false`
+
 	(en) for debugging, using console.debug.
+
 	(ja) console.debugを使ってデバッグ用情報を出力するようになります。
 
 
@@ -138,22 +144,25 @@ Reference
 * .cursor.next()
 
 	(en) move to next element and return move source element.
+
 	(ja) 次のエレメントに移動します。その際、移動元のエレメントを返します。
 
 * .cursor.prev()
 
 	(en) move to prev element and return move source element.
+
 	(ja) 前のエレメントに移動します。その際、移動元のエレメントを返します。
 
 * .cursor.current()
 
 	(en) return focused element.
+
 	(ja) フォーカスが当たっているエレメントを返します。
 
 License
 -------
 
-(en) Released under the MIT license (MIT-LICENSE.txt)
+(en) "Cursor jQuery Plugin" released under the MIT license (MIT-LICENSE.txt)
 
-(ja) "Cursor jQuery Plugin"は MITライセンスで配布しております。 (MIT-LICENSE.txt)
+(ja) "Cursor jQuery Plugin"は MITライセンスで配布してます。 (MIT-LICENSE.txt)
 
