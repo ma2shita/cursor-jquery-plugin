@@ -4,9 +4,15 @@ Cursor jQuery Plugin
 Overview
 --------
 
-GmailやGoogle Readerで見かけるカーソル移動が出来るようになるjQueryプラグイン
+* en
 
-キーボードショートカットと組み合わせて使うと、UIの幅が広がります。
+	"Cursor jQuery Plugin" is a jQuery plugin provides a movable cursor within the HTML elements, like the Gmail and Google Reader cursor.
+	Combined with a keyboard shortcuts,  you'll be able to provide a good UI.
+
+* ja
+
+	GmailやGoogle Readerで見かけるカーソル移動が出来るようになるjQueryプラグインです。
+	キーボードショートカットと組み合わせて使うと、UIの幅が広がります。
 
 Demo
 ----
@@ -106,25 +112,48 @@ Getting Start
 Reference
 ---------
 
-### methods ###
+### Init settings ###
 
-next
-: next
+* cursorElement : String
 
-prev
-: prev
+	default=`'li'`
+	(en) N/A
+	(ja) cursor()対象の子エレメントのうち、カーソル移動対象となるエレメントを指定します。
 
-current
-: return current
+* currentClassName : String
 
-### init settings ###
+	default=`'pointed'`
+	(en) N/A
+	(ja) フォーカスが当たっているエレメントに付与するクラス名を指定します。
 
-cursorElement
-: default = tr
+* debug : Boolean
 
-currentClassName
-: default = 'pointed'
+	default=`false`
+	(en) for debugging, using console.debug.
+	(ja) console.debugを使ってデバッグ用情報を出力するようになります。
 
-debug
-: default = false
+
+### Methods ###
+
+* .cursor.next()
+
+	(en) move to next element and return move source element.
+	(ja) 次のエレメントに移動します。その際、移動元のエレメントを返します。
+
+* .cursor.prev()
+
+	(en) move to prev element and return move source element.
+	(ja) 前のエレメントに移動します。その際、移動元のエレメントを返します。
+
+* .cursor.current()
+
+	(en) return focused element.
+	(ja) フォーカスが当たっているエレメントを返します。
+
+License
+-------
+
+(en) Released under the MIT license (MIT-LICENSE.txt)
+
+(ja) "Cursor jQuery Plugin"は MITライセンスで配布しております。 (MIT-LICENSE.txt)
 

@@ -1,3 +1,8 @@
+/*!
+ * Cursor jQuery Plugin v1.0
+ * By Kohei MATSUSHITA - https://github.com/ma2shita/cursor-jquery-plugin
+ * Released under the MIT license (MIT-LICENSE.txt)
+ */
 ;(function($){
 	var defaults = {
 		cursorElement: 'li',
