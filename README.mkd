@@ -12,7 +12,7 @@ Demo
 ----
 
 * [Simple](http://c.ma2shita.jp/cursor-jquery-plugin/examples/ex1.html)
-* [with Keyboard Shortcut (& init params)](http://c.ma2shita.jp/cursor-jquery-plugin/examples/ex1.html)
+* [with Keyboard Shortcut (& init params)](http://c.ma2shita.jp/cursor-jquery-plugin/examples/ex2.html)
 
 Environments
 ------------
