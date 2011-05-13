@@ -11,24 +11,24 @@ GmailやGoogle Readerで見かけるカーソル移動が出来るようにな�
 Demo
 ----
 
-* [Simple](examples/ex1.html)
-* [with Keyboard Shortcut (& init params)](examples/ex2.html)
+* [Simple](http://c.ma2shita.jp/cursor-jquery-plugin/examples/ex1.html)
+* [with Keyboard Shortcut (& init params)](http://c.ma2shita.jp/cursor-jquery-plugin/examples/ex1.html)
 
 Environments
 ------------
 
-### requirements ###
+### Requirements ###
 
 * jQuery 1.5 or higher
 
-### recommends ###
+### Recommends ###
 
 * [Handling Keyboard Shortcuts in JavaScript](http://www.openjs.com/scripts/events/keyboard_shortcuts/)
 
 Getting Start
 -------------
 
-### overview ###
+### Overview ###
 
 	$('#list').cursor();
 	$('#list').cursor.next();
