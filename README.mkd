@@ -25,7 +25,7 @@ Environments
 
 ### Requirements ###
 
-* jQuery 1.5 or higher
+* jQuery 1.4.0 or higher
 
 ### Recommends ###
 
@@ -46,13 +46,13 @@ Getting Start
 	<html>
 	  <head>
 	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-	    <script type="text/javascript" src="jquery.cursor.js"></script>
+	    <script type="text/javascript" src="jquery.cursor.min.js"></script>
 	    <script type="text/javascript">
 	      $(function(){
 	        $('#list').cursor(); /* init */
 		    /* bind action for cursor move */
-		    $('#up').bind('click', function(){$('#list').cursor.prev();});
-		    $('#down').bind('click', function(){$('#list').cursor.next();});
+		    $('#up').bind('click', function(){$('#list').cursor.prev();return false;});
+		    $('#down').bind('click', function(){$('#list').cursor.next();return false;});
 	      });
 		</script>
 	    <style type="text/css">
@@ -68,8 +68,8 @@ Getting Start
 	      <li>CLICK ME !!!</li>
 	      <li>bottom</li>
 	    </ul>
-	    <div id="up">cursor UP</div>
-	    <div id="down">cursor Down</div>
+	    <h2>Click this</h2>
+	    <a id="up" href="#">UP</a> <a id="down" href="#">Down</a>
 	  </body>
 	</html>
 
@@ -79,7 +79,7 @@ Getting Start
 	  <head>
 	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 	    <script type="text/javascript" src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
-	    <script type="text/javascript" src="jquery.cursor.js"></script>
+	    <script type="text/javascript" src="jquery.cursor.min.js"></script>
 	    <script type="text/javascript">
 	      $(function(){
 	        $('#list').cursor({cursorElement: 'tr', currentClassName: 'cur'}); /* init */
