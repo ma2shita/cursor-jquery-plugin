@@ -17,6 +17,12 @@ Overview
 Demo
 ----
 
+### Intro Movie ###
+
+[Cursor jQuery Plugin / 2min Intro Movie - YouTube](http://www.youtube.com/watch?v=T47lWVtkzyY)
+
+### Live Demo ###
+
 * [Simple](http://c.ma2shita.jp/cursor-jquery-plugin/examples/ex1.html)
 * [with Keyboard Shortcut (& init params)](http://c.ma2shita.jp/cursor-jquery-plugin/examples/ex2.html)
 
@@ -166,3 +172,4 @@ License
 
 (ja) "Cursor jQuery Plugin"は MITライセンスで配布してます。 (MIT-LICENSE.txt)
 
+[EoF]
